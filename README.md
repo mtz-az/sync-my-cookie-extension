@@ -5,25 +5,41 @@ SyncMyCookie is a chrome extension to synchronize your cookies.
 You can specify to sync cookies for any website, configure rules for `Auto Merge` and `Auto Push`.
 
 ## Install
-- **Updated Fork**: [SyncMyCookie.crx](https://github.com/mtz-az/sync-my-cookie-extension/raw/patch-1/sync-my-cookie.crx)
-- **Pre Built**: Load the `build` folder as unpacked extension
 
-  Enable the `Developer mode` in the Chrome Extension(`chrome://extensions`) and load it via `Load Unpacked`.
-  
-- Build from Source
+### ⚠️ Important Note About CRX Files
+Chrome no longer allows unsigned CRX files due to security restrictions. The CRX file in this repo will show a "CRX_REQUIRED_PROOF_MISSING" error. Please use the **Developer Mode Installation** method below instead.
 
-  ```bash
-  git clone https://github.com/mtz-az/sync-my-cookie-extension.git
-  cd sync-my-cookie-extension
-  npm install
-  npm run build   # or use: NODE_OPTIONS="--openssl-legacy-provider" NODE_ENV="production" npx webpack
-  ```
-  And load folder `build` just like the above method.
+### 🚀 Recommended Installation (Developer Mode)
+1. **Download or Clone this Repository**
+   ```bash
+   git clone https://github.com/mtz-az/sync-my-cookie-extension.git
+   cd sync-my-cookie-extension
+   ```
 
-### Installation Instructions
-1. **CRX Installation**: Download the CRX file and drag it into `chrome://extensions/` with Developer mode enabled
-2. **Unpacked Installation**: Clone this repo, build it, then load the `build` folder as an unpacked extension
-3. **Direct Download**: Download pre-built files from the releases section
+2. **Build the Extension** (if needed)
+   ```bash
+   npm install
+   # For Windows:
+   build.bat
+   # For Linux/macOS:
+   ./build.sh
+   # Or manually:
+   NODE_OPTIONS="--openssl-legacy-provider" NODE_ENV="production" npx webpack
+   ```
+
+3. **Load in Chrome**
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode" (toggle in top-right)
+   - Click "Load unpacked"
+   - Select the `build` folder from this repository
+
+### 📦 Alternative Installation Methods
+- **Pre-built ZIP**: [Download sync-my-cookie-extension.zip](https://github.com/mtz-az/sync-my-cookie-extension/raw/patch-1/sync-my-cookie-extension.zip) and extract
+- **Complete Guide**: See [INSTALLATION.md](./INSTALLATION.md) for detailed troubleshooting
+
+### ❌ Known Issues
+- **CRX files don't work**: Chrome blocks unsigned CRX files with "CRX_REQUIRED_PROOF_MISSING" error
+- **Solution**: Use Developer Mode installation method above
 
 ## Scenes to be used
 ### Avoid frequent logins
