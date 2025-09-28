@@ -1,6 +1,5 @@
 # SyncMyCookie
-[English](https://github.com/mtz-az/sync-my-cookie-extension/blob/master/README.md) | [中文](https://blog.andiedie.cn/posts/abbd/)
-
+[English](https://github.com/mtz-az/sync-my-cookie-extension/blob/master/README.md) 
 SyncMyCookie is a chrome extension to synchronize your cookies.
 
 You can specify to sync cookies for any website, configure rules for `Auto Merge` and `Auto Push`.
@@ -8,7 +7,6 @@ You can specify to sync cookies for any website, configure rules for `Auto Merge
 ## Install
 - **Updated Fork**: [SyncMyCookie.crx](https://github.com/mtz-az/sync-my-cookie-extension/raw/patch-1/sync-my-cookie.crx)
 - **Pre Built**: Load the `build` folder as unpacked extension
-- Original: [Chrome Web Store](https://chrome.google.com/webstore/detail/syncmycookie/laapobniolmbhnkldepjnebendehhmmf) (may be outdated)
 
   Enable the `Developer mode` in the Chrome Extension(`chrome://extensions`) and load it via `Load Unpacked`.
   
