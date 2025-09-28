@@ -1,38 +1,31 @@
-# [SyncMeIn](https://kainy.cn/SyncMeIn/#gh-fork)
-
-- [x] manifeast V3 升级
-- [x] 支持 localstorage 同步
-- [x] 云端刷新cookie
-- [ ] 团队协作，不同账户间分享。
-
-https://chromewebstore.google.com/detail/syncmein/ckgjnddipnnbiglonaenkaehimhbeihj
-
-
----
-
 # SyncMyCookie
-[English](https://github.com/Andiedie/sync-my-cookie/blob/master/README.md) | [中文](https://blog.andiedie.cn/posts/abbd/)
+[English](https://github.com/mtz-az/sync-my-cookie-extension/blob/master/README.md) | [中文](https://blog.andiedie.cn/posts/abbd/)
 
 SyncMyCookie is a chrome extension to synchronize your cookies.
 
 You can specify to sync cookies for any website, configure rules for `Auto Merge` and `Auto Push`.
 
 ## Install
-- Recommended: [Chrome Web Store](https://chrome.google.com/webstore/detail/syncmycookie/laapobniolmbhnkldepjnebendehhmmf)
-- [SyncMyCookie.crx](https://github.com/andiedie/sync-my-cookie/releases/download/v2.0.0/crx.zip)
-- [Pre Built](https://github.com/andiedie/sync-my-cookie/releases/download/v2.0.0/pre-built.zip)
+- **Updated Fork**: [SyncMyCookie.crx](https://github.com/mtz-az/sync-my-cookie-extension/raw/patch-1/sync-my-cookie.crx)
+- **Pre Built**: Load the `build` folder as unpacked extension
+- Original: [Chrome Web Store](https://chrome.google.com/webstore/detail/syncmycookie/laapobniolmbhnkldepjnebendehhmmf) (may be outdated)
 
   Enable the `Developer mode` in the Chrome Extension(`chrome://extensions`) and load it via `Load Unpacked`.
   
 - Build from Source
 
   ```bash
-  git clone https://github.com/Andiedie/sync-my-cookie.git
-  cd sync-my-cookie
-  yarn            # npm install
-  yarn build      # npm run build
+  git clone https://github.com/mtz-az/sync-my-cookie-extension.git
+  cd sync-my-cookie-extension
+  npm install
+  npm run build   # or use: NODE_OPTIONS="--openssl-legacy-provider" NODE_ENV="production" npx webpack
   ```
   And load folder `build` just like the above method.
+
+### Installation Instructions
+1. **CRX Installation**: Download the CRX file and drag it into `chrome://extensions/` with Developer mode enabled
+2. **Unpacked Installation**: Clone this repo, build it, then load the `build` folder as an unpacked extension
+3. **Direct Download**: Download pre-built files from the releases section
 
 ## Scenes to be used
 ### Avoid frequent logins
@@ -53,7 +46,7 @@ You can log in on one browser and enable `Auto Push`. On other browsers, enable 
 ## Configuration
 In order to share cookies across devices, this extension encrypts your cookies and save them in Gist, which requires you to have a GitHub account.
 
-If you have suggestions for using other types of storage to save data, please create an issue [here](https://github.com/Andiedie/sync-my-cookie/issues).
+If you have suggestions for using other types of storage to save data, please create an issue [here](https://github.com/mtz-az/sync-my-cookie-extension/issues).
 
 ### Generate GitHub Access Token
 GitHub Access Token (token for short) allows the extension to modify your Gist. You can generate a new token [here](https://github.com/settings/tokens/new).
